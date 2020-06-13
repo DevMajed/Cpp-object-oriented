@@ -5,8 +5,8 @@ The main idea is to practice skills sych as  class design, constructors and memb
 
 In this assignment, we were asked to creat a C++ Date class that stores a calendar date and test it using some values in the main function.\
 The requirnment of this class were: \
-1: To use three private integer data member variables to represent the date (month, day, and year).
-2: To supply the following public member functions in your class.
+1: To use three private integer data member variables to represent the date (month, day, and year). \
+2: To supply the following public member functions in your class. \
 - A default constructor (taking no arguments) that initializes the Date object  to Jan 1, 2000.
 - A constructor taking three arguments (month, day, year) that initializes the Date object to the parameter values.
 * it sets the Date's year to 1900 if the year parameter is less than 1900
