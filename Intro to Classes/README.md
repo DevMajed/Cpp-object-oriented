@@ -11,7 +11,7 @@ The requirnment of this class were: \
 - A constructor taking three arguments (month, day, year) that initializes the Date object to the parameter values.
 * it sets the Date's year to 1900 if the year parameter is less than 1900
 * it sets the Date's month to 1 if the month parameter is outside the range of 1 to 12.
-* it sets the Date's day to 1 if the day parameter is outside the range of days for the specific month. Assume February always has 28 days for this test.
+* it sets the Date's day to 1 if the day parameter is outside the range of days for the specific month. Assume February always has 28 days for this test. \
 3: A getDay member function that returns the Date's day value. \
 4: A getMonth member function that returns the Date's month value. \
 5: A getYear member function that returns the Date's year value. \
