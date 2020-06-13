@@ -8,9 +8,9 @@ The requirnment of this class were: \
 1: To use three private integer data member variables to represent the date (month, day, and year). \
 2: To supply the following public member functions in your class. \
 - A default constructor (taking no arguments) that initializes the Date object  to Jan 1, 2000.
-- A constructor taking three arguments (month, day, year) that initializes the Date object to the parameter values.
-* it sets the Date's year to 1900 if the year parameter is less than 1900
-* it sets the Date's month to 1 if the month parameter is outside the range of 1 to 12.
+- A constructor taking three arguments (month, day, year) that initializes the Date object to the parameter values. \
+* it sets the Date's year to 1900 if the year parameter is less than 1900 \
+* it sets the Date's month to 1 if the month parameter is outside the range of 1 to 12. \
 * it sets the Date's day to 1 if the day parameter is outside the range of days for the specific month. Assume February always has 28 days for this test. \
 3: A getDay member function that returns the Date's day value. \
 4: A getMonth member function that returns the Date's month value. \
