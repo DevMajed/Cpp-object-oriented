@@ -1,7 +1,7 @@
 # First C++ Program with Classes and Headers
 
 This was an assignment in my Object oreanted programing course using C++\
-The main idea is to practice skills sych as  class design, constructors and member functions, basic iostream output formatting \
+The main idea is to practice skills sych as  class design, constructors and member functions, basic iostream output formatting 
 
 In this assignment, we were asked to creat a C++ Date class that stores a calendar date and test it using some values in the main function.\
 The requirnment of this class were: \
