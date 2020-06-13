@@ -12,9 +12,9 @@ The requirnment of this class were: \
 * it sets the Date's year to 1900 if the year parameter is less than 1900
 * it sets the Date's month to 1 if the month parameter is outside the range of 1 to 12.
 * it sets the Date's day to 1 if the day parameter is outside the range of days for the specific month. Assume February always has 28 days for this test.
-3: A getDay member function that returns the Date's day value.
-4: A getMonth member function that returns the Date's month value.
-5: A getYear member function that returns the Date's year value.
-6: A getMonthName member function that returns the name of the month for the Date's month (e.g. if the Date represents 2/14/2000, it returns "February").  You can return a const char* or a std::string object from this function.
-7: A print member function that prints the date in the numeric form MM/DD/YYYY to cout (e.g. 02/14/2000). Month and day must be two digits with leading zeros as needed.
+3: A getDay member function that returns the Date's day value. \
+4: A getMonth member function that returns the Date's month value. \
+5: A getYear member function that returns the Date's year value. \
+6: A getMonthName member function that returns the name of the month for the Date's month (e.g. if the Date represents 2/14/2000, it returns "February").  You can return a const char* or a std::string object from this function.\
+7: A print member function that prints the date in the numeric form MM/DD/YYYY to cout (e.g. 02/14/2000). Month and day must be two digits with leading zeros as needed. \
 8: A printLong member function that prints the date with the month's name in the form dd month yyyy (e.g. 14 February 2000) to cout. This member function should call the getMonthName() member function to get the name.  No leading zeroes required for the day.
