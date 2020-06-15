@@ -1,10 +1,3 @@
-// Majed Alharbi
-// Assignment1
-//
-//  Created by Majed Mesh on 6/7/20.
-//  Copyright © 2020 Majed Mesh. All rights reserved.
-// use three private integer data member variables to represent the date (month, day, and year).
-
 
 #include <iostream>
 #include <iomanip>
