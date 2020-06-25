@@ -11,7 +11,7 @@ removing from the queue at the other end (the head)\
 printing all items the queue (from head to tail)\
 erasing all items in the queue (leaving the queue empty).\
 destructor to empty the queue before it's destroyed (to release all memory)\
-Additions and removals always occur at the opposite ends of the queue.\
+Additions and removals always occur at the opposite ends of the queue.
 
 # Testing
 To teset the class i made a main function that does the following: 
