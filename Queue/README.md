@@ -3,7 +3,7 @@ This project is a good demonstration ofclass construction, class composition, po
 
 
 # Description
-Creating a Queue class that implements a queue abstraction. A queue is a FIFO list (First In First Out queue). We will need to make two classes, The first one is the Queue class where all the algorithm is implemented,and the second class is the Queueitem class which gnerate and delete iteams and allocate memory. \
+Creating a Queue class that implements a queue abstraction. A queue is a FIFO list (First In First Out queue). We will need to make two classes, The first one is the Queue class where all the algorithm is implemented,and the second class is the Queueitem class which gnerate and delete iteams and allocate memory. 
 
 The Queue class needs to implement the following operations: \
 adding to the queue at one end (the tail)\
