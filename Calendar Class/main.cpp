@@ -1,23 +1,24 @@
-// ----------Start of The Main Function Provided By Dr. Yelena Rykalova----------\\
+// Main code for testing the class
 
-    
 #include "Date.hpp"
 #include <iostream>
 #include <iomanip>
 #include <string>
+using std::cin;
+using std::cout;
+using std::endl;
+using std::setfill;
+using std::setw;
+using std::string;
+using namespace std;
 
 int main()
     {
+        // That main function used to test our code
         
-        using std::cin;
-        using std::cout;
-        using std::endl;
-        using std::setfill;
-        using std::setw;
-        using std::string;
-        using namespace std;
+       
+        
         Date();
-
         cout << "DateDemo starting ..." << endl << endl;
         
         Date d1;             // default ctor
@@ -46,11 +47,3 @@ int main()
     
         return 0;
     }
-
-
-
-    // ----------End of the main Function Provided By Dr. Yelena Rykalova----------\\
-
-    
-    
-

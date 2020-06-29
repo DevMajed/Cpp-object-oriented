@@ -1,8 +1,12 @@
+// Calendar 
+//  Created by Majed Mesh on 6/7/20.
+//  Copyright © 2020 Majed Mesh. All rights reserved.
+
+
 
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include "Date.hpp"
 using std::cin;
 using std::cout;
 using std::endl;
@@ -10,10 +14,40 @@ using std::setfill;
 using std::setw;
 using std::string;
 using namespace std;
+#define _CRT_SECURE_NO_WARNINGS
 
 
+class Date
+
+{
+
+private:
+
+    int month;
+    int day;
+    int year;
+
+
+public:
+
+    // Making Initial Constructur
+    Date(int Month = 1, int Day = 1, int Year = 2000);
+
+
+    // Start of The Three Requred Memeber Functions
+    int getYear() { return year; }
+    int getMonth() { return month; }
+    int getDay() { return day; }
+    // End  of The Three Requred Memeber Functions
+
+    string getMonthName();
+    void print();
+    void printLong();
+
+
+};
     
-    // a constructor that initializes  Date object to  parameter values
+    // a constructor that initializes Date object to  parameter values
     Date :: Date(int Month, int Day, int Year)
     
     {
@@ -126,7 +160,7 @@ using namespace std;
         {
                      
                 char m[25];
-                sprintf(m, "%02d", month);
+                sprintf_s(m, "%02d", month);
                 cout << m << "/" << day << "/" << year << endl;
 
         }
@@ -135,9 +169,9 @@ using namespace std;
         {
                                    
                 char m[25];
-                sprintf(m, "%02d", month);
+                sprintf_s(m, "%02d", month);
                 char d[25];
-                sprintf(d, "%02d", day);
+                sprintf_s(d, "%02d", day);
                 cout << m << "/" << d << "/" << year << endl;
 
         }
@@ -146,7 +180,7 @@ using namespace std;
         else if (month >= 10 && day < 10)
         {
             char d[25];
-            sprintf(d, "%02d", day);
+            sprintf_s(d, "%02d", day);
             cout << month << "/" << d << "/" << year << endl;
         }
     
@@ -163,4 +197,3 @@ using namespace std;
         Date MonthN;
         cout << day << " " << MonthN.getMonthName() << " " << year << endl;
     }
-

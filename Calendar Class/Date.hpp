@@ -1,14 +1,10 @@
-//
-//  Date.hpp
-//  Assignment 1 Majed Alharbi
-//
+// Calendar Class
 //  Created by Majed Mesh on 6/8/20.
 //  Copyright © 2020 Majed Mesh. All rights reserved.
-//
+
 
 #ifndef Date_hpp
 #define Date_hpp
-
 #include <iostream>
 #include <iomanip>
 #include <string>
