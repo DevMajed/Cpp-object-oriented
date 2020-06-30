@@ -1,7 +1,11 @@
-# Objeact Oreanted Programing using C++
+# Queue Class
+A queue is a FIFO list (First In First Out queue).
+A simple example is waiting in line, where the first person in the line is the first served. New arrivals are added to the back of the line,
+the next person served is (removed) from the front of the line.
+Thus project is a Queue class that implements a queue abstraction. 
 
-Here i share some of the assignments and projects that i did for my C++ programing class during my undergrad study
+Necessary skills: class construction, class composition, pointers and linked lists, heap memory management with C++ new/delete operators.
 
-![d3y0i7e-c1ee111a-4413-429c-b811-8861c4877ba6](https://user-images.githubusercontent.com/66625688/84724974-836a0380-af57-11ea-989f-d9d18e443b72.jpg)
 
+ 
  
