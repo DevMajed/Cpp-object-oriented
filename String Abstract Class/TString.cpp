@@ -1,9 +1,7 @@
 //
 //  String.cpp
-//  Assignment 3 Majed
-//
 //  Created by Majed Alharbi on 7/4/20.
-//  Copyright © 2020 Majed Alharbi. All rights reserved.
+//  Copyright Â© 2020 Majed Alharbi. All rights reserved.
 #include <iostream>
 #include <string>
 #include <stdio.h>
@@ -174,15 +172,20 @@ void TString::assign(const char* pText)
     else
     {
         delete mpText;
-        mLength = strlen(pText);
-        mpText = new char[mLength + 1];
-        strcpy(mpText, pText);
+        if (pText == nullptr)
+        {
+            mLength = 0;
+            mpText = new char[mLength + 1];
+            mpText[mLength] = '\0';
+        }
 
-        strcpy(mpText, mpText);
-
-
+        else
+        {
+            mLength = strlen(pText);
+            mpText = new char[mLength + 1];
+            strcpy(mpText, pText);
+        }
     }
-
 }
 
 
