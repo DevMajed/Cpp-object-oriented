@@ -1,4 +1,0 @@
-C:\Users\majed\Desktop\Majed Assignment 3\Debug\String Abstract Class.exe
-C:\Users\majed\Desktop\Majed Assignment 3\Debug\String Abstract Class.pdb
-C:\Users\majed\Desktop\String Abstract Class\Debug\String Abstract Class.exe
-C:\Users\majed\Desktop\String Abstract Class\Debug\String Abstract Class.pdb

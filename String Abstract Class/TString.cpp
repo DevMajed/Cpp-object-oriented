@@ -1,102 +1,101 @@
-//
-//  String.cpp
-//  Created by Majed Alharbi on 7/4/20.
-//  Copyright Â© 2020 Majed Alharbi. All rights reserved.
-#include <iostream>
-#include <string>
-#include <stdio.h>
-#include <stdlib.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+
 #include "TString.h"
+#include <stdio.h>
+#include <iostream>
+#include <string.h>
+#define strcpy_s(a, b, c) strncpy(a, c, b)
 
-// A constructor accepting a const char pointer to an array of characters,
-// with a default argument value of 0 (null pointer).
 
-// If a null pointer or empty string (char array of length 1 containing a '\0' null char)
-// is passed, it initializes this String object to point at a dynamically allocated character array of length 1 
-// (containing the null char value '\0') in the heap.
 
-// Otherwise, it dynamically allocates a char array of the same size as the parameter char array,
-// and copies the parameter char data into it. Note that this is a deep copy (ie. copying all the char data)
-// so that this object has it's own copy of the char data, vs. a shallow copy
-// (just copying the pointer value to the parameter's char data).
 
-TString::TString(const char* pText) 
 
+
+
+
+// Initilazation Constructur
+//----------------------------------------------------------\\
+    // Constructor with default Value PText = nullptr, So no garbage values.
+    // The point of it is ti give a name to the string and save content in it.
+    // When user Call TString, then some name, this will make sure that some
+    // chars interd bu the user stored in a pointer pText.
+    // then we will make new memory adress for mpTest member and give it that
+    // Data. this way we can use Tstring type for many variables.
+
+
+    // parameterize constructor
+TString::TString(const char* pText)
 {
-
-
-  
-
-
-    if (pText == 0)
+    // Allocating to Null
+    if (pText == nullptr)
 
     {
-        mLength;
         mLength = 0;
         mpText = new char[mLength + 1];
         mpText[mLength] = '\0';
     }
 
+    // Allocating to the heap and copying the contant in the mpText pointer
     else
     {
-        // first thing is to calculate how long the string is so we can copy the data from the string (pText) to our buffer (mpText.)
-
+        // Taking  length of the intered chars to alocate a memory adress.
         mLength = strlen(pText);
-
-        // now i know how big our buffer should be, i allocate memory in the heap for it, and add + for the null termnator
+        // using new to make new memory adress in the heap for mpTest.
         mpText = new char[mLength + 1];
-
-        // Next i will copy i will copy my string pText into my buffer mpText.
-        strcpy(mpText,  pText);
+        // Giving the data from pText to mpText, Deep copy, this way we
+        // can make many variables of type TString.
+        strcpy(mpText, pText);
     }
 
+    // Goal is done, Now mpText has memory adress and Data.
 
 }
 
-// A copy constructor accepting a String object (by const reference). It initializes this
-// String from the parameter String object, making a deep copy of the character data by dynamically
-// allocating a char array of the same size as the parameter String's, and copying the char data.
+//----------------------------------------------------------\\
 
-// We need this constructor because if we just copy regulary in main like string majed = oldstring, 
-// it will crash because when we copy the string C++ takes th members we have in class, length and mpText,
-// and copy them in new memory adress contain string majed.
-// the problem is that this is a dircet or sholow copy, this means the memory afress for both majed
-// and mpText is the same and later when we use descturcotr we try to free the memory twice and we get crash.
-// we are copyying the pointer so both poin to exact buffer of memory. deleting one delete the other.
-// To solve the problem, we will allocate a new char array to store the coppied string .. By making 
-// (( Deep Copy ))
-// So here is the copy constructur and it will be called to that second new string when we copy it
 
-// a constructur that take a const ref to the same class
-// this will take the memory of (Sobject) to copy it to into the class members.
-//
-TString::TString(const TString& Sobject)
-    : mLength(Sobject.mLength) // i shollow copy that because it is integer
+
+
+
+
+
+//Copy Constructor
+//----------------------------------------------------------\\
+    //It is called when any object created of the same type from an already
+    //created object then it performs a deep copy. It allocates new space on
+    //the heap for the object that is to be created and copies the contents
+    //of the passed object(that is passed as a reference).
+    // Wht const reference? because using by value will make shallow copy, By
+    // reference will change the contant of the pointer so no need to return
+    // which save time and memory, but const reference will insure that the
+    // function does not change the value of the argument.
+TString::TString(const TString& Object)
+    : mLength(Object.mLength) // Cleaner initializer list instead of mLength = Object.mLength; in the body
+
 {
-    // here allocate a new buffer with the correct size so we don't use the same pointer as the old one.
+    //  Ex: Tstring Majed (William);
+     // dot operator to access members and function public
+     // to that class and to give the length of the passed argument.
+     // using new to make new memory adress in the heap for mpTest.
     mpText = new char[mLength + 1];
-    // here we copy from Sobject buffer into the buffer mpText of the string class
-    strcpy(mpText, Sobject.mpText);
+    // Copy the Object argument into mpText.
+    strcpy(mpText, Object.mpText);
 
-    // That is, Deep copy
-    // To test, write in the main
-    // string Majed = "A good Engineer"
-    // string William = Majed.
-    // Test modifying one string not the other, and see if both change mean something wrong.
-    // No crash
-    // pass by reffrance if we maky pring function instead of printing in main because
-    // if that function oly has stdout string and then we use it in main eacy time we call it we
-    // creat new memory in the heap and then we copy it and use which waste memory, instead we can make
-    //it calling by reffrance, which mean passing the existing string to that function.
-    // and also make it const ref because it won't edit anything.
-    // so always pass by reff is better.
-
-  
+    // Now in example above, Majed is equal to the contant of William.
 }
+//----------------------------------------------------------\\
 
 
 
-// To avoid memory leaking because we used (new) and we got place in heap memory.
+
+
+
+//Destructur
+//----------------------------------------------------------\\
+    //to Relese the Memory and t0o avoid memory leaking because
+    //we used (new) and we got place in heap memory.
+
 TString:: ~TString()
 {
     delete[] mpText;
@@ -104,72 +103,120 @@ TString:: ~TString()
 
 
 
+//----------------------------------------------------------\\
+    
 
 
-// A length member function returning the current size of the character data (not including the final null character).
+
+
+//Length member function
+//----------------------------------------------------------\\
 
 int TString::length() const
 {
     return mLength;
+    // Explanation of int length() const Member Function:
+    // It is a Getter, we can't edit or motivy any of the class members.
+    // the reason it is Const is that we dont want it to edit
+    // the member that it will call, we just want int length.
+    // No stuff in the bodt of the function because we just want to
+    // make the user's life easier when they want the length they
+    // write Majed.length(); for example,so it just directs mLength.
+    // if we say const int* const int length () const, it will mean:
+    // it means we returning a pointer thatn can't be modified,
+    // The content of the pointer can't be modified, and the function
+    // itself can't modify
 }
+//----------------------------------------------------------\\
 
 
 
 
-// An asChar member function returning a const char pointer to this String's encapsulate
-// character data. It does not allocate new memory for the char data to be returned.
+// asChar member function
+//----------------------------------------------------------\\
+    // Returns a character representation of the given string.
+    // without the need to allocate new memory for the returned chars.
+    // Const Char* : returning a pointer thatn can't be modified,
+    // asChar() Const: the function itself can't modify arguments.
+    // it is orgnizer just like length
 
+char* TString::asChar() const
 
-
-const char* TString::asChar() const
 {
     return mpText;
 }
+//----------------------------------------------------------\\
 
 
 
 
-// An assign member function accepting a String object parameter (by const reference), and a return type of void.
-// It first checks for assignment to self and returns if true.
-// Otherwise, it uses delete to  release the current char array it points to,
-// then dynamcally allocates a new char array of the same size as the parameter String's,
-// and copies the character data from the parameter String.
+// Assign member function
+//----------------------------------------------------------\\
+    
+void TString::assign(const TString& Object)
+// This will do the assignment so each variable has its  own chars.
+// calling by const reference so we won't change anything in Object.
+// it check for assignment to self and return if true instead of wasting
+// memory.
+// if not, it uses delete to delete the contant of char array it points,
+// Then it dynamically allocates new char array with the same size as
+// the passed string and coppies the data from the passed string in the
+// parameter to the char array.
+// Example: assigning one string to other
+// string str1 = "hello"
+// string str2 = str1  // makes a new copy
+// str1[0] = 'y'; // changes str1, but not str2
 
+// To assign to self i'll ned ( this ) here
+// The compiler supplies an implicit pointer along with the names of the functions as ‘this’.
+// "This" is a pointer to the current instance.
 
-void TString::assign(const TString& Sobject)
 {
-    if (this == &Sobject)
+    // is the cuurent instance of Object equal to Object in this function? if yes return
+    if (this == &Object)
     {
         return;
     }
+
+    // if not equal, delete mpText, Give it a memory adress, copy the Pass Object to it.
     else
     {
         delete mpText;
-        mLength = (Sobject.mLength);
-        mpText = new char[mLength + 1];
-        strcpy(mpText, Sobject.mpText);
+        // use mLength through the dot operator
+        mLength = (Object.mLength);
+        mpText = new char[Object.mLength + 1];
+        // Copt the current mpText from this function to the real mpText
+        strcpy(mpText, Object.mpText);
 
-        // i am using the dot here to acess the mpText that is in Sobject, and same with length.
+
+
+
+
     }
 }
 
+//----------------------------------------------------------\\
 
 
-// An assign member function accepting a const char pointer to an array of characters, and a return type of void.
-// It checks for assignment to self, and returns if true. // Otherwise,
-// it uses delete to  release the current char array it points to,
-// then dynamcally allocates a new char array of the same size as the parameter String's,
-//and copies the character data from the parameter String.
+
+
+// Assign member function
+//----------------------------------------------------------\\
+    // it accepts a buffer, const char pointer to array of chars( the one we made in the constructor )
+    // it does the same as the above function but at the pointer level.
+
 
 void TString::assign(const char* pText)
-
 {
+    // if the two pointers equal to each other, save memory and return.
     if (mpText == pText)
     {
         return;
     }
 
     else
+
+
     {
         delete mpText;
         if (pText == nullptr)
@@ -178,54 +225,73 @@ void TString::assign(const char* pText)
             mpText = new char[mLength + 1];
             mpText[mLength] = '\0';
         }
-
         else
         {
+            // use mLength through the dot operator
             mLength = strlen(pText);
             mpText = new char[mLength + 1];
+            // Copt the current mpText from this function to the real mpText
             strcpy(mpText, pText);
         }
     }
+
 }
 
+//----------------------------------------------------------\\
 
-// An equals member function accepting a String object parameter 
-// (by const reference), and a return type of bool.
-// It compares the character data of this String with the character data of the
-// parameter String object and returns true if they match, else false (the C++ string library function strcmp or 
-//trncmp can be used for the comparison).
 
-bool TString::equals(const TString& Sobject) const
+
+
+// equals member function
+//----------------------------------------------------------\\
+// This will check if two strings are equal or not, otherways it will not edit any member.
+    // Example:
+    //string s1( "abc" );
+    //string s2( "def" );
+    //string s3( "abc" );
+    //...
+    //bool flag1 = ( s1 == s2 ); // flag1 = false now
+    //bool flag2 = ( s1 == s3 ); // flag2 = true now
+
+bool TString::equals(const TString& Object) const
+
 {
-    // The dot because spassing by ref ..
-    if (strcmp(mpText, Sobject.mpText) == 0)
+    if (strcmp(mpText, Object.mpText) == 0)
     {
         return true;
-
     }
     else
+    {
         return false;
-
+    }
 }
 
+//----------------------------------------------------------\\
 
 
-// An indexOf member function accepting a char parameter, and a return type of int. 
-//It searches this String's character data for the first occurrence of the parameter character and returns
-//the position if found (first character is position 0) or -1 if not found.
 
-int TString::indexOf(const char& PositiondChar) const
+
+// indexOf member function
+//----------------------------------------------------------\\
+// This one will accept a charictar and then it will search in the array of chars
+// to see where is the position of that char.
+
+
+int TString::indexOf(const char& Position) const
+
+
 {
-
-    for (int i = 0; i < mLength; i++)
+    int i;
+    for (i = 0; i < mLength; i++)
     {
-
-        if (mpText[i] == PositiondChar)
+        if (mpText[i] == Position)
         {
             return i;
         }
-
     }
     return -1;
 
 }
+//----------------------------------------------------------\\
+
+
