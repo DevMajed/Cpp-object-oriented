@@ -1,10 +1,7 @@
 # String class Abstraction 
 
-This is a String class that represents a character string abstraction. \
-it stores the character data dynamically in the heap \
- C++ Standard Library string class (std::string) is not used in this project because  \
- it meant to be done in order to study and know what is happening under the hood.
-
+This is a String class that represents a character string abstraction where  C++ Standard Library string class (std::string) is not used. \
+The objective of this project is to see what is happening under the hood of String classes in C++ or other languages.
 
 
 Classs Functions: 
