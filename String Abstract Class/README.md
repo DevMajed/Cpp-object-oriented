@@ -1,13 +1,13 @@
 # String class Abstraction 
 
-This is a String class that represents a character string abstraction. \\
-it stores the character data dynamically in the heap \\
- C++ Standard Library string class (std::string) is not used in this project because  \\
+This is a String class that represents a character string abstraction. \
+it stores the character data dynamically in the heap \
+ C++ Standard Library string class (std::string) is not used in this project because  \
  it meant to be done in order to study and know what is happening under the hood.
 
 
 
-Classs Functions: \\
+Classs Functions: 
 
 
 * A constructor accepting a const char pointer to an array of characters, with a default argument value of 0 (null pointer). If a null pointer or empty string (char array of length 1 containing a '\0' null char) is passed, it initializes this String object to point at a dynamically allocated character array of length 1  (containing the null char value '\0') in the heap. Otherwise, it dynamically allocates a char array of the same size as the parameter char array, and copies the parameter char data into it. Note that this is a deep copy (ie. copying all the char data) so that this object has it's own copy of the char data, vs. a shallow copy (just copying the pointer value to the parameter's char data). 
