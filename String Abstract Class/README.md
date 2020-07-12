@@ -1,4 +1,4 @@
-# Objeact Oreanted Programing using C++
+# String class Abstraction 
 
 This is a String class that represents a character string abstraction. \\
 it stores the character data dynamically in the heap \\
