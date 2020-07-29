@@ -1,7 +1,4 @@
 // Calendar 
-//  Created by Majed Mesh on 6/7/20.
-//  Copyright © 2020 Majed Mesh. All rights reserved.
-
 
 
 #include <iostream>
