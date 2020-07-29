@@ -1,10 +1,4 @@
-//
 //  QueueItem.hpp
-//  Majed's Assignment 2
-//
-//  Created by Majed Mesh on 6/21/20.
-//  Copyright © 2020 Majed Mesh. All rights reserved.
-// This is for Queueitem class that represent eaach element in the Queueltem
 
 
 #ifndef QueueItem_hpp
