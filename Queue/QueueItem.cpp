@@ -1,5 +1,4 @@
 //  QueueItem.cpp
-//  Copyright © 2020 Majed Mesh. All rights reserved.
 // Queueitem class that represent eaach element in the Queueltem
 
 #include <iostream>
