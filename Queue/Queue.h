@@ -1,10 +1,7 @@
 //
 //  Queue.hpp
-//  Majed's Assignment 2
-//
-//  Created by Majed Mesh on 6/21/20.
-//  Copyright © 2020 Majed Mesh. All rights reserved.
-//
+//  Created by Majed.
+
 
 class QueueItem;    
 #ifndef Queue_hpp
