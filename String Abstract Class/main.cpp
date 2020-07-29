@@ -3,46 +3,6 @@
 // XString2.cpp - Test program for simple String class
 //-----------------------------------------------------------------------------
 
-/*
- * Note: If using MS VC++, you will create this project with multiple files.
- * TString.h, TString.cpp, and this file (XString2.cpp) that contains main().
- *
- * Click File->New, select the Project tab, and "Win32 console application"
- * to create the new project. Select the location for the project,
- * enter the project name (eg. Homework3), and Click OK.  On the next window,
- * select "Empty Project", and click Finish.
- *
- * Click on the "FileView" tab in the left window to see the Source, Header,
- * and Resource files in your project (none to start).
- *
- * Click File->New, "C/C++ Header File" to create your TString.h header file.
- * This file will contain your class definition, which is included into any
- * file that will use your TString class.
- *
- * Click File->New, "C++ Source File" to create your TString.cpp source file.
- * This file will contain the member functions implementing your TString class.
- * It must #include "TString.h" to have the compiler see the header when
- * compiling it.
- *
- * Copy this file (XString2.cpp) into your project directory.
- *
- * Click Project->Add To Project->Files, select this file (XString2.cpp) from
- * the browse window, and click OK.
- *
- * Your project should now contain the Source files TString.cpp and XString2.cpp,
- * and the Header files TString.h
- *
- * Write the TString class definition in the TString.h file, write your
- * implementation code in TString.cpp, compile, and test with the main() in
- * XString2.cpp.
- *
- ******************************************************************************
- * Note - although this code will test many aspects of your TString class,
- * having it run successfully doesn't guarantee that there are no runtime
- * dynamic memory logic errors in your code.
- *
- */
-
 #include "TString.h"
 
 #include <fstream>
