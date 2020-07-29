@@ -1,4 +1,3 @@
-// Main code for testing the class
 
 #include "Date.hpp"
 #include <iostream>
@@ -14,7 +13,6 @@ using namespace std;
 
 int main()
     {
-        // That main function used to test our code
         
        
         
