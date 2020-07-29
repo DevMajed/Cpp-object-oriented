@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{7B1BE865-2D7D-4D55-8B36-4990C78B11B3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Assignment1Majed</RootNamespace>
+    <RootNamespace>CalendarTest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>Calendar Class</ProjectName>
   </PropertyGroup>
