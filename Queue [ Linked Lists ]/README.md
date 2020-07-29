@@ -1,4 +1,4 @@
-# Queue Class
+# Queue Class [ Linked Lists ]
 A queue is a FIFO list (First In First Out queue).
 A simple example is waiting in line, where the first person in the line is the first served. New arrivals are added to the back of the line,
 the next person served is (removed) from the front of the line.
