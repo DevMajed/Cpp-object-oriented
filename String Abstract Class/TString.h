@@ -1,10 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 //  TString.hpp
-//  Strings
-//
-//  Created by Majed Alharbi on 7/9/20.
-//  Copyright © 2020 Majed. All rights reserved.
-
 
 #include <string.h>
 #include <stdio.h>
