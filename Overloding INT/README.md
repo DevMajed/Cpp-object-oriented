@@ -1,7 +1,7 @@
 # Overloading INT
 
 This is a simple project that i build to understand inheritance, dynamic binding, and overloading. \
-it is a hierarchy of C++ classes representing various shapes (eg. circle, rectangle, square). Each class will have its own .cpp source file and .h header file.. \
+it is a hierarchy of C++ classes representing various shapes (eg. circle, rectangle, square). Each class will have its own .cpp source file and .h header file.. 
 
 It has an abstract Shape class that will be the base class of all the other shapes. It has one private std::string instance variable representing the shape's color, and the following public member functions: 
 
