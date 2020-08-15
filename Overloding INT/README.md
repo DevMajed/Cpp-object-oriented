@@ -1,6 +1,4 @@
-# Objeact Oreanted Programing using C++
-
-Necessary skills: Class inheritance, Member function overriding (virtual functions), Dynamic binding, Multiple classes (separate source and header files), C++ Standard Library string, iostream, iomanip, stringstream classes
+# Overloading INT
 
 This is a simple project that i build to understand inheritance, dynamic binding, and overloading. \
 it is a hierarchy of C++ classes representing various shapes (eg. circle, rectangle, square). Each class will have its own .cpp source file and .h header file.. \
